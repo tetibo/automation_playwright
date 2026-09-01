@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test('Test 1: Verify login with valid credentials', async ({ page }) => {
   // 1. Open login page
-  await page.goto('https://practicesoftwaretesting.com/auth/login');
+await page.goto('/auth/login');
 
   // 2. Fill in valid credentials
   await page.locator('#email').fill('customer@practicesoftwaretesting.com');
@@ -13,13 +13,13 @@ test('Test 1: Verify login with valid credentials', async ({ page }) => {
 
 
   // 4. Wait for the account page to load
-  await page.waitForURL('https://practicesoftwaretesting.com/account', {
+  await page.waitForURL('/account', {
     timeout: 30000,
   });
 
   // Assertion 1: Verify URL
   await expect(page).toHaveURL(
-    'https://practicesoftwaretesting.com/account'
+    '/account'
   );
 
   // Assertion 2: Verify page title
