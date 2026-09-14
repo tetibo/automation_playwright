@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('Test 1: Verify login with valid credentials', async ({ page }) => {
+test('1: Verify login with valid credentials', async ({ page }) => {
   // 1. Open login page
 await page.goto('/auth/login');
 
