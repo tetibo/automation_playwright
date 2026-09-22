@@ -6,7 +6,7 @@ export class HomePage {
 
   constructor(page: Page) {
     this.page = page;
-    this.products = page.locator('[data-test="product-name"]');
+    this.products = page.getByTestId('product-name');
   }
 
   async open() {
